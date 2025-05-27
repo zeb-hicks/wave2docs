@@ -1,0 +1,14 @@
+[book]
+authors = ["zeb-hicks"]
+language = "en"
+src = "src"
+title = "Wave2 Book"
+description = "Documentation for the Wave2 SIMD Vector Processor and related tools."
+
+[build]
+create-missing = false
+build-dir = "/mnt/bigstore/web/home/wave2"
+
+[output.html]
+additional-js = ["w2slang.js"]
+additional-css = ["extra.css"]
