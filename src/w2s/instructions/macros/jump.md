@@ -20,7 +20,7 @@ On the final line we use the [WSelect](../wselect.md) move instruction to move t
 
 Wave2Assembly provides some helpful macros for modifying the program counter more ergonomically.
 
-We can use [labels](./lables.md) to mark locations to jump to more easily:
+We can use [labels](./labels.md) to mark locations to jump to more easily:
 
 ```w2s
 :loop
