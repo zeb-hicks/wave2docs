@@ -1,3 +1,5 @@
+"strict mode";
+
 export class ShipSim {
   canvas = null;
   g = null;
@@ -113,7 +115,8 @@ export class Rect {
 }
 
 export function from565to888(c) {
-  c = Number.parseInt(c, 16);
+  if (typeof c === "string")
+    c = Number.parseInt(c, 16);
   let b = c & 0b11111;
   let g = (c >> 5) & 0b111111;
   let r = (c >> 11) & 0b11111;
@@ -123,9 +126,9 @@ export function from565to888(c) {
   r <<= 3;
 
   function h2(n) {
-    if (n < 0xf) return "0" + n.toString(16);
+    if (n <= 0xf) return "0" + n.toString(16);
     return n.toString(16);
   }
 
-  return "#" + h2(r) + h2(g) + h2(b);
+  return `#${h2(r)}${h2(g)}${h2(b)}`;
 }
