@@ -1,5 +1,49 @@
 # Move
 
+Copying data between registers and memory is done using the `move` instructions.
+
+The following two equivalent mnemonics for move are available:
+```w2s
+mov
+move
+```
+
+The assembler combines the `move`, `load`, and `store` opcodes into a single instruction `move`, picking the appropriate opcode given the provided operands.
+
+## Standard Move
+When provided with two registers as operands, the `move` instruction is translated to the `move` opcode as normal. This results in the data being copied from the source to the destination registers directly.
+
+## Store
+If the destination operand is a pointer, the 
+
+## Load
+
+## Skip
+A special case when loading any value into the `c0` constant register exists that is a no-op that advances the program counter by the number of words loaded.
+
+The `skip` mnemonics are as follows:
+```w2s
+skip, skip1
+skip2
+skip3
+skip4
+```
+
+The numbered `skip` instructions advance the program counter by the same amount, and `skip` is the same as `skip1` in that it also advances the PC by one.
+
+## Specifying Words
+
+### Scatter
+
+### Gather
+
+
+
+
+
+
+
+
 ```
 (0x4) Move copies source register words to destination register
  -> extra bits set to one will not copy the respective word (performs a "Mix" operation)

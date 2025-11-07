@@ -58,17 +58,17 @@
 
 ### Architecture
 
-The Wave2 CPU has 8 constant and 8* general purpose registers.
+The Wave2 CPU has 8 constant and 8* general purpose registers, and IO is memory mapped with some modularity.
 
-Wave2's architecture is designed such that most operations are [SIMD](/arch/simd.md), affecting all four words of their respective [vectors](/vectors.md).
+Wave2's architecture is designed such that most operations are [SIMD](./arch/simd.md), affecting all four words of their respective vectors.
 
-In addition, it is a multi-user simulation. Each user has multiple cores, and all users and their cores are executed concurrently.
+In addition, it is a partially-sandboxed multi-user simulation. Each user has multiple cores, and all users and their cores are executed concurrently. Cores can run code from anywhere in memory, including the shared memory region.
 
-The bytes in [memory](/memory.md) are stored in little-endian order. Bytes from user writes, such as from chat or when loading binaries, are interpreted as big-endian, and then written to memory in little-endian.
+The bytes in [memory](./memory.md) are stored in little-endian order. Bytes from user writes, such as from chat or when loading binaries, are interpreted as big-endian, and then written to memory in little-endian.
 
 The vector words are also in little-endian order, such that the least significant component `X` is the first in memory. The memory order begins at the least significant byte, with the least significant word first.
 
-All CPU registers are [SIMD vectors](/arch/simd.md), holding a quartet of 16-bit words.<br>Some special instructions can operate on vectors as an octuplet of 8-bit words.
+All CPU registers are [SIMD vectors](./arch/simd.md), holding a quartet of 16-bit words.<br>Some special instructions can operate on vectors as an octuplet of 8-bit words.
 
 Memory is addressed by 16-bit words. Each memory address maps to a single word within its vector.
 
@@ -78,4 +78,4 @@ For example:
 0x0001 => 0xEF39
 ```
 
-See [Memory](/memory.md) for more on the memory and its layout.
+See [Memory](./memory.md) for more on the memory and its layout.
