@@ -12,3 +12,6 @@ build-dir = "/mnt/bigstore/web/home/wave2"
 [output.html]
 additional-js = ["w2slang.js"]
 additional-css = ["extra.css"]
+
+[preprocessor.katex]
+after = ["links"]

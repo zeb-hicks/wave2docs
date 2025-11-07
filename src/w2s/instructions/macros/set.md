@@ -1,9 +1,9 @@
 # Set
 
-- [Rationale](#Rationale)
-- [The Program Counter](#TheProgramCounter)
-- [Labels as Data](#LabelsAsData)
-## <a name="Rationale"></a>Rationale
+- [Rationale](#rationale)
+- [The Program Counter](#the-program-counter)
+- [Labels as Data](#labels-as-data)
+## Rationale
 
 The `set` macro allows you to ergonomically store values directly into registers.
 
@@ -23,7 +23,7 @@ However there are situations where you may need more values than can fit into th
 One way to solve this problem might be to store a larger set of values in other memory regions, or constructing a series of programs to load chunks of data elsewhere, and then load the actual program afterwards.
 
 Alternatively, the CPU has a convenient trick we can use for loading values into registers directly from the program memory.
-## <a name="TheProgramCounter"></a>The Program Counter
+## The Program Counter
 
 Since the program counter contains the value of the proceeding instruction to be executed, we can take advantage of this and use it as a pointer for the next instruction as a literal value to load from. For example:
 
@@ -70,7 +70,7 @@ mov r0.xyz [ri.x+]
 set3 r0, $1111, $2222, $3333
 ```
 
-## <a name="LabelsAsData"></a>Labels as Data
+## Labels as Data
 
 In addition to setting immediate values, we can also take advantage of the assembler's preprocessor to use the addresses of labels as values at runtime.
 
