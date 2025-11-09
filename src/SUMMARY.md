@@ -24,6 +24,7 @@
     - [Ship Color Cycler](./examples/shipcolor.md)
     - [Basic Flight Control]() %% () %%
     - [Advanced Flight Control]() %% () %%
+    - [Random Flier](./examples/ship.md)
 # Tools
 - [VS Code Extensions](./tools/vscode.md)
 - [Simulator](./tools/debugger.md)
