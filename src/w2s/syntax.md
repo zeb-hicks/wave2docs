@@ -8,7 +8,7 @@
 - [Literals](#literals)
 - [Inline Values](#inline-values)
 
-Wave2 Assembly's syntax is very similar to the [NASM](https://www.nasm.us/xdoc/2.16.03/html/nasmdoc3.html#section-3.1) flavoured assembly. The operands are ordered Intel style (instruction destination, source) and use the semicolon `;` for comments.
+Wave2 Assembly's syntax is similar to [NASM](https://www.nasm.us/xdoc/2.16.03/html/nasmdoc3.html#section-3.1). The operands are ordered Intel style (instruction destination, source) with commas, effective addresses use \[bracket\] syntax, and the semicolon `;` is used for comments.
 ## Section Directives
 
 The first thing you'll see in most Wave2 assembly files is the `.memory` directive, which defines the start of a region containing a sequence of values to be stored in the constant registers.
@@ -96,8 +96,12 @@ The operand order is, as described earlier, in the Intel operand order, similar 
 mov r0, c2
 ```
 
-This is because `r0` is the destination, and `c2` is the source. An easy way to remember this may be thinking of the order as being similar to writing out a math equation:
-$$ r_0 = c_2 $$
+This is because `r0` is the destination, and `c2` is the source. An easy way to remember this may be thinking of the order as being the same as the order in which you'd assign values in most programming languages. Equivalent to something like:
+
+```
+r0 = c2
+```
+
 Some instructions take three operands, such as the math instructions. The three operands in this case are in the order `dest, lhs, rhs` where `lhs` and `rhs` are the left and right hand sides of the math equation, and the destination is the register the arithmetic is performed on, and as such the register the value will be stored in.
 ## Literals
 
