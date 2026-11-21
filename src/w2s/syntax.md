@@ -38,14 +38,14 @@ The core syntax typically takes the following structure:
         <tr>
             <td style="text-align: right;" title="Add instruction, one of the math instructions that performs addition.">add</td>
             <td title="Math operation size specifier .w which makes this add instruction a 16-bit word math operation.">.w</td>
-            <td title="This is the destination of the math instruction. The result will be stored in this register.">r0,</td>
-            <td title="Left hand side of the math operation.">r0,</td>
+            <td title="This is the destination of the math instruction. The result will be stored in this register.">r0</td>
+            <td title="Left hand side of the math operation.">r0</td>
             <td title="Right hand side of the math operation.">c1</td>
         </tr>
         <tr>
             <td style="text-align: right;" title="Move instruction mnemonic.">mov</td>
             <td title="Move instructions do not take a size specifier."></td>
-            <td title="Destination for the move operation.">r0,</td>
+            <td title="Destination for the move operation.">r0</td>
             <td title="Source for the move operation.">r1</td>
             <td></td>
         </tr>
@@ -58,7 +58,7 @@ The core syntax typically takes the following structure:
         <tr>
             <td style="text-align: right;" title="The multiply instruction, part of the special instruction set.">mul</td>
             <td title="Multiply does not take a size specifier, instead the special high/low byte multiplication instructions use different mnemonics. See the page on special instructions for more details."></td>
-            <td title="The destination, and left hand side value.">r1,</td>
+            <td title="The destination, and left hand side value.">r1</td>
             <td title="The right hand side value.">r2</td>
             <td></td>
         </tr>

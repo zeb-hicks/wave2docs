@@ -48,11 +48,12 @@
             - [Jump](./w2s/instructions/macros/jump.md)
             - [Labels](./w2s/instructions/macros/labels.md)
 # Waver High Level Language
-- [Syntax]()
+- [Syntax](./waver/syntax.md)
 	- [Operators]()
 	- [Vectors]()
 	- [Memory]()
-	- [Built-in Functions]()
+	- [Built-in Functions](./waver/builtins.md)
 	- [Control Flow]()
 	- [Subroutines]()
 - [Compiler]()
+w
